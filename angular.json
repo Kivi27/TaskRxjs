@@ -35,5 +35,8 @@
         }
       }
     }},
-  "defaultProject": "task_rxjs"
+  "defaultProject": "task_rxjs",
+  "cli": {
+    "analytics": "c7ddc82a-75db-4b46-a8e6-1b66cf98f428"
+  }
 }
