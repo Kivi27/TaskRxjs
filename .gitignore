@@ -1,0 +1,8 @@
+#node modules
+/node_modules
+
+#angular
+/.angular
+
+#setting idea
+/.idea
