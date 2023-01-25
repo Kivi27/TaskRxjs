@@ -4,7 +4,7 @@ import { of } from "rxjs"
 
 @Component({
     selector: 'my-app',
-    template: ``,
+    template: `<h1>Check console!</h1>`,
 })
 export class AppComponent implements OnInit {
     sendRequest(number: number): Observable<number> {
