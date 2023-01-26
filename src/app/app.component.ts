@@ -15,22 +15,21 @@ export class AppComponent implements OnInit {
     }
 
     getResponse(request: Observable<number>): Observable<number> {
-        const result: Observable<number> =  new Observable<number>(observer => {
+        const result$: Observable<number> =  new Observable<number>(observer => {
             request.pipe(map(num => this.sendRequest(num)))
-                .subscribe(obs => obs.subscribe(
+                .subscribe(obs$ => obs$.subscribe(
                     value => observer.next(value)
                 ))
         });
 
-        return result;
+        return result$;
     }
 
     ngOnInit() {
-        const testObservable:Observable<number> = of(1, 2, 3, 4, 5);
-        testObservable.subscribe(x => console.log(`begin value: ${x}`));
+        const testObservable$:Observable<number> = of(1, 2, 3, 4, 5);
+        testObservable$.subscribe(x => console.log(`begin value: ${x}`));
 
-        const response:Observable<number> = this.getResponse(testObservable);
+        const response:Observable<number> = this.getResponse(testObservable$);
         response.subscribe(x => console.log(`end value: ${x}`));
     }
-
 }
