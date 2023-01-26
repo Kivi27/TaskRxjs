@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
         const testObservable$:Observable<number> = of(1, 2, 3, 4, 5);
         testObservable$.subscribe(x => console.log(`begin value: ${x}`));
 
-        const response:Observable<number> = this.getResponse(testObservable$);
-        response.subscribe(x => console.log(`end value: ${x}`));
+        const response$:Observable<number> = this.getResponse(testObservable$);
+        response$.subscribe(x => console.log(`end value: ${x}`));
     }
 }
